@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Edo | Official Tourism & Cultural Gateway</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Design System & Overrides -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+
+  <style>
+    /* Tourism Page Specific Component Styles */
+    .hero-page-banner {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+      color: var(--color-text-light);
+      padding: var(--space-6) 0 var(--space-5);
+      border-bottom: 3px solid var(--color-accent);
+    }
+
+    .tourist-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background-color: var(--color-surface);
+      transition: all var(--transition-smooth);
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tourist-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-primary-light);
+    }
+
+    .tourist-card-img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .category-badge {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+    }
+
+    .badge-heritage { background-color: var(--color-primary); color: #ffffff; }
+    .badge-nature { background-color: var(--color-accent); color: var(--color-secondary); }
+    .badge-culture { background-color: var(--color-primary-dark); color: #ffffff; }
+
+    .highlight-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background-color: var(--color-primary-subtle);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small><i class="bi bi-geo-alt-fill me-1 text-accent"></i> Heart of the Ancient Benin Empire</small>
+      <div class="topbar-links">
+        <a href="news.html" class="me-3"><i class="bi bi-newspaper me-1"></i> Tourism Press</a>
+        <a href="../lgas.html"><i class="bi bi-globe me-1"></i> LGA Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Crest & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/brand/edo-coat-of-arms.png" alt="Edo State Crest" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+        <div>
+          <div class="brand-text-title">EDSG</div>
+          <div class="brand-text-subtitle">Official State Portal</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        
+          <!-- 1. Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <!-- 2. Governance Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="governanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Governance
+            </a>
+            <ul class="dropdown-menu shadow border-0" aria-labelledby="governanceDropdown">
+              <li><a class="dropdown-item" href="../goverance/executive-cabinet.html"><i class="bi bi-person-badge me-2 text-accent"></i> Executive Leadership</a></li>
+              <li><a class="dropdown-item" href="../goverance/legislature.html"><i class="bi bi-bank me-2 text-accent"></i> House of Assembly</a></li>
+              <li><a class="dropdown-item" href="../goverance/judiciary.html"><i class="bi bi-shield-shaded me-2 text-accent"></i> Judiciary</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MDAs Directory -->
+          <li class="nav-item">
+            <a class="nav-link" href="../mdas.html">MDAs Directory</a>
+          </li>
+
+          <!-- 4. E-Services -->
+          <li class="nav-item">
+            <a class="nav-link" href="../e-services.html">E-Services</a>
+          </li>
+
+          <!-- 5. LGAs Portal -->
+          <li class="nav-item">
+            <a class="nav-link" href="../lgas.html">LGAs Portal</a>
+          </li>
+
+          <!-- Citizen Portal CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="../e-services.html" class="btn btn-accent btn-sm text-uppercase fw-semibold"><i class="bi bi-laptop me-1"></i> Citizen Portal</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-page-banner">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-lg-8">
+          <span class="badge bg-accent text-dark mb-2 px-3 py-1 text-uppercase fw-bold">Culture & Tourism</span>
+          <h1 class="text-white fw-bold display-5 mb-2">Discover Edo State</h1>
+          <p class="text-light opacity-75 lead mb-0">
+            Explore centuries of rich heritage, world-renowned bronze craftsmanship, eco-resorts, and vibrant cultural festivals.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="d-inline-block text-center p-3 rounded bg-dark-card border border-dark-subtle text-white">
+            <i class="bi bi-compass fs-1 text-accent d-block mb-1"></i>
+            <div class="small text-uppercase fw-bold text-light opacity-75">Heartbeat of Nigeria</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="section-padding bg-alt-section">
+    <div class="container">
+
+      <!-- Cultural Heritage Overview Section -->
+      <section class="mb-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <span class="text-uppercase fw-bold text-accent tracking-wider small">Living History</span>
+            <h2 class="fw-bold text-secondary mb-3">Where Antiquity Meets Modernity</h2>
+            <p class="text-muted leading-relaxed mb-3">
+              Edo State is internationally recognized as the birthplace of the ancient Benin Empire, famous for its magnificent bronze castings, intricate ivory carvings, and royal traditions that remain active to this day.
+            </p>
+            <p class="text-muted leading-relaxed mb-4">
+              From the bustling bronze smith quarters of Igun Street to the lush landscapes of Okomu National Park and the scenic hills of Somorika, Edo offers an unforgettable blend of historical exploration and eco-adventure.
+            </p>
+            
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#destinations" class="btn btn-primary fw-bold px-4">Explore Destinations</a>
+              <a href="#visitor-info" class="btn btn-outline-primary fw-bold px-4">Visitor Information</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="p-3 shadow-sm rounded bg-white text-center border">
+                  <div class="highlight-icon-box mx-auto mb-2"><i class="bi bi-award"></i></div>
+                  <h4 class="h6 fw-bold text-secondary mb-1">Igun Bronze</h4>
+                  <p class="small text-muted mb-0">UNESCO World Heritage List</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 shadow-sm rounded bg-white text-center border">
+                  <div class="highlight-icon-box mx-auto mb-2"><i class="bi bi-tree"></i></div>
+                  <h4 class="h6 fw-bold text-secondary mb-1">Okomu Park</h4>
+                  <p class="small text-muted mb-0">Rainforest & Wildlife Sanctuary</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 shadow-sm rounded bg-white text-center border">
+                  <div class="highlight-icon-box mx-auto mb-2"><i class="bi bi-house-door"></i></div>
+                  <h4 class="h6 fw-bold text-secondary mb-1">The Royal Palace</h4>
+                  <p class="small text-muted mb-0">Seat of the Oba of Benin</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 shadow-sm rounded bg-white text-center border">
+                  <div class="highlight-icon-box mx-auto mb-2"><i class="bi bi-calendar-event"></i></div>
+                  <h4 class="h6 fw-bold text-secondary mb-1">Igue Festival</h4>
+                  <p class="small text-muted mb-0">Annual Royal Thanksgiving</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Attractions Grid -->
+      <section id="destinations" class="mt-5">
+        <div class="text-center max-w-3xl mx-auto mb-5">
+          <span class="text-uppercase fw-bold text-accent tracking-wider small">Featured Sites</span>
+          <h2 class="fw-bold text-secondary">Top Destinations & Landmarks</h2>
+          <p class="text-muted">Discover the premier historic, natural, and cultural attractions across Edo State.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Attraction 1: Palace of the Oba of Benin -->
+          <div class="col-md-6 col-lg-4">
+            <div class="tourist-card">
+              <img src="https://placehold.co/600x400/28505C/FFFFFF?text=Royal+Palace+Benin" alt="Oba of Benin Palace" class="tourist-card-img">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="category-badge badge-heritage">Monuments</span>
+                  <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Oredo, Benin City</small>
+                </div>
+                <h3 class="h5 fw-bold text-secondary mb-2">Palace of the Oba of Benin</h3>
+                <p class="small text-muted flex-grow-1">
+                  Located in the heart of Benin City, the Royal Palace is a sacred site housing architectural relics and royal artifacts dating back to the 13th century.
+                </p>
+                <div class="pt-3 border-top mt-auto">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-info-circle me-1"></i> Guided tours with permission</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 2: Igun Street Bronze Guild -->
+          <div class="col-md-6 col-lg-4">
+            <div class="tourist-card">
+              <img src="https://placehold.co/600x400/28505C/FFFFFF?text=Igun+Bronze+Street" alt="Igun Street Guild" class="tourist-card-img">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="category-badge badge-culture">Craftsmanship</span>
+                  <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Igun Street, Benin</small>
+                </div>
+                <h3 class="h5 fw-bold text-secondary mb-2">Igun Street Bronze Casting</h3>
+                <p class="small text-muted flex-grow-1">
+                  A UNESCO-listed cultural heritage site home to traditional bronze casters practicing lost-wax casting methods passed down for generations.
+                </p>
+                <div class="pt-3 border-top mt-auto">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-bag me-1"></i> Authentic souvenirs available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 3: Okomu National Park -->
+          <div class="col-md-6 col-lg-4">
+            <div class="tourist-card">
+              <img src="https://placehold.co/600x400/28505C/FFFFFF?text=Okomu+National+Park" alt="Okomu National Park" class="tourist-card-img">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="category-badge badge-nature">Eco-Tourism</span>
+                  <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Ovia South-West</small>
+                </div>
+                <h3 class="h5 fw-bold text-secondary mb-2">Okomu National Park</h3>
+                <p class="small text-muted flex-grow-1">
+                  A tropical rainforest sanctuary protecting endangered white-throated monkeys, forest elephants, canopy walkways, and rich bird life.
+                </p>
+                <div class="pt-3 border-top mt-auto">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-binoculars me-1"></i> Canopy walk & lodge available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 4: Somorika Hills -->
+          <div class="col-md-6 col-lg-4">
+            <div class="tourist-card">
+              <img src="https://placehold.co/600x400/28505C/FFFFFF?text=Somorika+Hills" alt="Somorika Hills" class="tourist-card-img">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="category-badge badge-nature">Landscape</span>
+                  <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Akoko-Edo</small>
+                </div>
+                <h3 class="h5 fw-bold text-secondary mb-2">Somorika Hills & Boulders</h3>
+                <p class="small text-muted flex-grow-1">
+                  Famous for its massive granite rock formations, ancient healing traditions, panoramic views, and scenic hiking terrain in northern Edo.
+                </p>
+                <div class="pt-3 border-top mt-auto">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-signpost me-1"></i> Ideal for hiking & photography</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 5: Benin City National Museum -->
+          <div class="col-md-6 col-lg-4">
+            <div class="tourist-card">
+              <img src="https://placehold.co/600x400/28505C/FFFFFF?text=National+Museum" alt="Benin City National Museum" class="tourist-card-img">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="category-badge badge-heritage">Exhibits</span>
+                  <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>King's Square, Benin</small>
+                </div>
+                <h3 class="h5 fw-bold text-secondary mb-2">Benin National Museum</h3>
+                <p class="small text-muted flex-grow-1">
+                  Located in Ring Road, storing thousands of historical terracottas, bronzes, cast metalworks, and royal regalia detailing ancient West Africa.
+                </p>
+                <div class="pt-3 border-top mt-auto">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-clock me-1"></i> Open daily for visitors</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 6: Ososo Tourist Centre -->
+          <div class="col-md-6 col-lg-4">
+            <div class="tourist-card">
+              <img src="https://placehold.co/600x400/28505C/FFFFFF?text=Ososo+Tourist+Centre" alt="Ososo Tourist Centre" class="tourist-card-img">
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="category-badge badge-nature">Resort</span>
+                  <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Akoko-Edo</small>
+                </div>
+                <h3 class="h5 fw-bold text-secondary mb-2">Ososo Tourist Centre</h3>
+                <p class="small text-muted flex-grow-1">
+                  Set among rolling hills on the border with Kogi State, offering cool weather, scenic views, streams, and tranquil retreat cabins.
+                </p>
+                <div class="pt-3 border-top mt-auto">
+                  <span class="small fw-semibold text-primary"><i class="bi bi-sun me-1"></i> Eco-tourism & lodging</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visitor Information & Logistics Section -->
+      <section id="visitor-info" class="mt-5">
+        <div class="card border-0 shadow-sm p-4 p-md-5 bg-white">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <span class="text-uppercase fw-bold text-accent tracking-wider small">Travel Essentials</span>
+              <h3 class="fw-bold text-secondary mb-3">Plan Your Trip to Edo State</h3>
+              
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <h4 class="h6 fw-bold text-secondary"><i class="bi bi-airplane me-2 text-primary"></i>By Air</h4>
+                  <p class="small text-muted">Benin Airport (BNI) connects directly to major national hubs including Lagos and Abuja.</p>
+                </div>
+                <div class="col-sm-6">
+                  <h4 class="h6 fw-bold text-secondary"><i class="bi bi-car-front me-2 text-primary"></i>By Road</h4>
+                  <p class="small text-muted">Connected via major interstate expressways linking South-South, South-West, and Northern states.</p>
+                </div>
+                <div class="col-sm-6">
+                  <h4 class="h6 fw-bold text-secondary"><i class="bi bi-building me-2 text-primary"></i>Hospitality</h4>
+                  <p class="small text-muted">Wide selection of international standard hotels, boutique resorts, and guest lodges in Benin City.</p>
+                </div>
+                <div class="col-sm-6">
+                  <h4 class="h6 fw-bold text-secondary"><i class="bi bi-shield-check me-2 text-primary"></i>Visitor Safety</h4>
+                  <p class="small text-muted">Dedicated tourist assistance, police security, and municipal guide services available upon request.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="p-4 rounded bg-primary-subtle border">
+                <h4 class="h5 fw-bold text-secondary mb-2"><i class="bi bi-headset me-2 text-primary"></i>Tourism Bureau Desk</h4>
+                <p class="small text-muted mb-3">For inquiries on official tour guide bookings, event schedules, or festival itineraries, reach out to the Ministry of Arts, Culture & Tourism.</p>
+                <a href="../mdas.html" class="btn btn-primary w-100 fw-bold mb-2">Ministry Directory</a>
+                <a href="../e-services.html" class="btn btn-outline-primary w-100 fw-bold">Citizen & Tourist Portal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="../assets/images/brand/edo-coat-of-arms.png" alt="Edo State Seal" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+            <div>
+              <h5 class="mb-0 text-white fw-bold">Edo State Government</h5>
+              <small class="text-accent">Official Gateway Portal</small>
+            </div>
+          </div>
+          <p class="text-light opacity-75 small mb-3">
+            “Strengthening Peace… SHINE Agenda”
+          </p>
+          <div class="social-links d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Government -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white">Government</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html">Government</a></li>
+            <li><a href="../goverance/executive-cabinet.html">Office of the Governor</a></li>
+            <li><a href="../mdas.html">MDAs Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Policies -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Policies</h5>
+          <ul class="footer-links">
+            <li><a href="../e-services.html">Health</a></li>
+            <li><a href="../e-services.html">Welfare</a></li>
+            <li><a href="../e-services.html">Employment</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: About -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">About</h5>
+          <ul class="footer-links">
+            <li><a href="../lgas.html">People</a></li>
+            <li><a href="visit-edo.html">Visit Edo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="small mb-0 text-light opacity-75">
+          &copy; 2026 Edo State Government. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

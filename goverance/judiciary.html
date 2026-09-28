@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Judiciary | Edo State Government</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Design System & Overrides -->
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+
+  <style>
+    /* Judiciary Specific Component Styles */
+    .hero-page-banner {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+      color: var(--color-text-light);
+      padding: var(--space-6) 0 var(--space-5);
+      border-bottom: 3px solid var(--color-accent);
+    }
+
+    .judiciary-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background-color: var(--color-surface);
+      transition: all var(--transition-smooth);
+      height: 100%;
+    }
+
+    .judiciary-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-primary-light);
+    }
+
+    .court-icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background-color: var(--color-primary-subtle);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .official-avatar {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+
+    .quick-link-card {
+      border-left: 4px solid var(--color-primary);
+      background-color: var(--color-surface);
+      transition: all var(--transition-fast);
+    }
+
+    .quick-link-card:hover {
+      border-left-color: var(--color-accent);
+      background-color: var(--color-primary-subtle);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small><i class="bi bi-geo-alt-fill me-1 text-accent"></i> High Court Complex, Sapele Road, Benin City</small>
+      <div class="topbar-links">
+        <a href="../pages/news.html" class="me-3"><i class="bi bi-newspaper me-1"></i> Legal Notices</a>
+        <a href="../lgas.html"><i class="bi bi-globe me-1"></i> LGA Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Crest & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../assets/images/brand/edo-coat-of-arms.png" alt="Edo State Crest" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+        <div>
+          <div class="brand-text-title">EDSG</div>
+          <div class="brand-text-subtitle">Official State Portal</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        
+          <!-- 1. Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+
+          <!-- 2. Governance Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="governanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Governance
+            </a>
+            <ul class="dropdown-menu shadow border-0" aria-labelledby="governanceDropdown">
+              <li><a class="dropdown-item" href="executive-cabinet.html"><i class="bi bi-person-badge me-2 text-accent"></i> Executive Leadership</a></li>
+              <li><a class="dropdown-item" href="legislature.html"><i class="bi bi-bank me-2 text-accent"></i> House of Assembly</a></li>
+              <li><a class="dropdown-item active" href="judiciary.html"><i class="bi bi-shield-shaded me-2 text-accent"></i> Judiciary</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MDAs Directory -->
+          <li class="nav-item">
+            <a class="nav-link" href="../mdas.html">MDAs Directory</a>
+          </li>
+
+          <!-- 4. E-Services -->
+          <li class="nav-item">
+            <a class="nav-link" href="../e-services.html">E-Services</a>
+          </li>
+
+          <!-- 5. LGAs Portal -->
+          <li class="nav-item">
+            <a class="nav-link" href="../lgas.html">LGAs Portal</a>
+          </li>
+
+          <!-- Citizen Portal CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="../e-services.html" class="btn btn-accent btn-sm text-uppercase fw-semibold"><i class="bi bi-laptop me-1"></i> Citizen Portal</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-page-banner">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-lg-8">
+          <span class="badge bg-accent text-dark mb-2 px-3 py-1 text-uppercase fw-bold">Third Arm of Government</span>
+          <h1 class="text-white fw-bold display-5 mb-2">Edo State Judiciary</h1>
+          <p class="text-light opacity-75 lead mb-0">
+            Upholding the rule of law, dispensing justice impartially, and safeguarding constitutional rights across Edo State.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="d-inline-block text-center p-3 rounded bg-dark-card border border-dark-subtle text-white">
+            <i class="bi bi-bank fs-1 text-accent d-block mb-1"></i>
+            <div class="small text-uppercase fw-bold text-light opacity-75">Administration of Justice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="section-padding bg-alt-section">
+    <div class="container">
+
+      <!-- Chief Judge & Leadership Section -->
+      <section class="mb-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm overflow-hidden">
+              <img src="https://placehold.co/400x480/28505C/FFFFFF?text=Hon.+Chief+Judge" alt="Chief Judge of Edo State" class="official-avatar">
+              <div class="card-body p-4 text-center bg-white">
+                <span class="badge bg-primary-subtle text-primary mb-2 px-3 py-1 fw-bold">Head of Judiciary</span>
+                <h3 class="h5 fw-bold text-secondary mb-1">Hon. Justice Daniel Okungbowa</h3>
+                <p class="small text-muted mb-0">Chief Judge of Edo State</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-8">
+            <div class="ps-lg-3">
+              <span class="text-uppercase fw-bold text-accent tracking-wider small">Judicial Mandate</span>
+              <h2 class="fw-bold text-secondary mb-3">Ensuring Swift & Equitable Justice</h2>
+              <p class="text-muted leading-relaxed mb-4">
+                The Edo State Judiciary operates as an independent constitutional arm of government. Committed to modern judicial administration, digital court automation, and accessible legal remedies, our courts serve every citizen with transparency and fairness.
+              </p>
+
+              <!-- Quick Links / Key Pillars -->
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="p-3 shadow-sm rounded quick-link-card">
+                    <h4 class="h6 fw-bold text-secondary mb-1"><i class="bi bi-file-earmark-text me-2 text-primary"></i>E-Filing System</h4>
+                    <p class="small text-muted mb-0">Submit legal documents & track court cases online.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-3 shadow-sm rounded quick-link-card">
+                    <h4 class="h6 fw-bold text-secondary mb-1"><i class="bi bi-journal-check me-2 text-primary"></i>Cause Lists</h4>
+                    <p class="small text-muted mb-0">Access daily hearing schedules across all judicial divisions.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-3 shadow-sm rounded quick-link-card">
+                    <h4 class="h6 fw-bold text-secondary mb-1"><i class="bi bi-diagram-3 me-2 text-primary"></i>Alternative Dispute Resolution</h4>
+                    <p class="small text-muted mb-0">Mediation and settlement through the Edo Multi-Door Court House.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="p-3 shadow-sm rounded quick-link-card">
+                    <h4 class="h6 fw-bold text-secondary mb-1"><i class="bi bi-shield-check me-2 text-primary"></i>Probate Registry</h4>
+                    <p class="small text-muted mb-0">Official guidance on estate management, wills, and letters of administration.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Court Divisions & Organs -->
+      <section class="mt-5">
+        <div class="text-center max-w-3xl mx-auto mb-5">
+          <span class="text-uppercase fw-bold text-accent tracking-wider small">Judicial Structure</span>
+          <h2 class="fw-bold text-secondary">Courts & Judicial Divisions</h2>
+          <p class="text-muted">The court system is structured across multiple tiers to serve civil, criminal, and customary matters throughout Edo State.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- High Court -->
+          <div class="col-md-6 col-lg-4">
+            <div class="judiciary-card p-4 d-flex flex-column">
+              <div class="court-icon-box mb-3">
+                <i class="bi bi-bank"></i>
+              </div>
+              <h3 class="h5 fw-bold text-secondary">High Court of Justice</h3>
+              <p class="small text-muted flex-grow-1">
+                Holds unlimited jurisdiction over civil and criminal proceedings. Headquartered in Benin City with judicial divisions across key local councils.
+              </p>
+              <div class="pt-3 border-top mt-auto">
+                <span class="badge bg-light text-dark border me-1"><i class="bi bi-geo-alt me-1"></i> Benin City</span>
+                <span class="badge bg-light text-dark border"><i class="bi bi-geo-alt me-1"></i> Auchi & Ekpoma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customary Court of Appeal -->
+          <div class="col-md-6 col-lg-4">
+            <div class="judiciary-card p-4 d-flex flex-column">
+              <div class="court-icon-box mb-3">
+                <i class="bi bi-book"></i>
+              </div>
+              <h3 class="h5 fw-bold text-secondary">Customary Court of Appeal</h3>
+              <p class="small text-muted flex-grow-1">
+                Exercises appellate and supervisory jurisdiction in civil proceedings involving questions of customary law across the state.
+              </p>
+              <div class="pt-3 border-top mt-auto">
+                <span class="badge bg-light text-dark border"><i class="bi bi-shield me-1"></i> Customary Jurisprudence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Magistrate Courts -->
+          <div class="col-md-6 col-lg-4">
+            <div class="judiciary-card p-4 d-flex flex-column">
+              <div class="court-icon-box mb-3">
+                <i class="bi bi-balance"></i>
+              </div>
+              <h3 class="h5 fw-bold text-secondary">Magistrate Courts</h3>
+              <p class="small text-muted flex-grow-1">
+                Handles summary criminal trials, summary civil claims, and preliminary inquiries situated across all 18 Local Government Areas.
+              </p>
+              <div class="pt-3 border-top mt-auto">
+                <span class="badge bg-light text-dark border"><i class="bi bi-building me-1"></i> 18 LGAs Coverage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customary Courts -->
+          <div class="col-md-6 col-lg-4">
+            <div class="judiciary-card p-4 d-flex flex-column">
+              <div class="court-icon-box mb-3">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3 class="h5 fw-bold text-secondary">Area & Customary Courts</h3>
+              <p class="small text-muted flex-grow-1">
+                Adjudicates local disputes, family matters, land tenure disputes, and traditional law issues at the community level.
+              </p>
+              <div class="pt-3 border-top mt-auto">
+                <span class="badge bg-light text-dark border"><i class="bi bi-diagram-2 me-1"></i> Grassroots Access</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Edo Multi-Door Court House -->
+          <div class="col-md-6 col-lg-4">
+            <div class="judiciary-card p-4 d-flex flex-column">
+              <div class="court-icon-box mb-3">
+                <i class="bi bi-handshake"></i>
+              </div>
+              <h3 class="h5 fw-bold text-secondary">Multi-Door Court House</h3>
+              <p class="small text-muted flex-grow-1">
+                Provides court-connected Alternative Dispute Resolution (ADR) including arbitration, conciliation, and mediation.
+              </p>
+              <div class="pt-3 border-top mt-auto">
+                <span class="badge bg-light text-dark border"><i class="bi bi-check-circle me-1"></i> Fast-Track Settlement</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Judicial Service Commission -->
+          <div class="col-md-6 col-lg-4">
+            <div class="judiciary-card p-4 d-flex flex-column">
+              <div class="court-icon-box mb-3">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3 class="h5 fw-bold text-secondary">Judicial Service Commission</h3>
+              <p class="small text-muted flex-grow-1">
+                Oversees appointments, promotions, training, and disciplinary control of judicial officers and support personnel.
+              </p>
+              <div class="pt-3 border-top mt-auto">
+                <span class="badge bg-light text-dark border"><i class="bi bi-gear me-1"></i> Judicial Oversight</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Legal Help & Registry Contact -->
+      <section class="mt-5">
+        <div class="card bg-primary text-white border-0 shadow rounded-lg p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h3 class="fw-bold mb-2 text-white">Need Judicial Information or Court Filings?</h3>
+              <p class="text-light opacity-75 mb-0">
+                Contact the High Court Chief Registrar's office for certified copies, bailiff services, or general inquiry.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="../e-services.html" class="btn btn-accent btn-lg fw-bold text-uppercase">
+                <i class="bi bi-headset me-2"></i> Legal E-Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="../assets/images/brand/edo-coat-of-arms.png" alt="Edo State Seal" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+            <div>
+              <h5 class="mb-0 text-white fw-bold">Edo State Government</h5>
+              <small class="text-accent">Official Gateway Portal</small>
+            </div>
+          </div>
+          <p class="text-light opacity-75 small mb-3">
+            “Strengthening Peace… SHINE Agenda”
+          </p>
+          <div class="social-links d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Government -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white">Government</h5>
+          <ul class="footer-links">
+            <li><a href="../index.html">Government</a></li>
+            <li><a href="executive-cabinet.html">Office of the Governor</a></li>
+            <li><a href="../mdas.html">MDAs Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Policies -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Policies</h5>
+          <ul class="footer-links">
+            <li><a href="../e-services.html">Health</a></li>
+            <li><a href="../e-services.html">Welfare</a></li>
+            <li><a href="../e-services.html">Employment</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: About -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">About</h5>
+          <ul class="footer-links">
+            <li><a href="../lgas.html">People</a></li>
+            <li><a href="../pages/visit-edo.html">Visit Edo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="small mb-0 text-light opacity-75">
+          &copy; 2026 Edo State Government. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
