@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Government Areas | Edo State Government</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Design System & Overrides -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <style>
+    /* LGA Specific Component Styles */
+    .hero-page-banner {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
+      color: var(--color-text-light);
+      padding: var(--space-6) 0 var(--space-5);
+      border-bottom: 3px solid var(--color-accent);
+    }
+
+    .lga-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background-color: var(--color-surface);
+      transition: all var(--transition-smooth);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lga-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-primary-light);
+    }
+
+    .lga-card-header {
+      background-color: var(--color-primary-subtle);
+      border-bottom: 1px solid var(--color-border);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+
+    .badge-senatorial {
+      font-size: var(--fs-xs);
+      font-weight: var(--fw-bold);
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+    }
+
+    .badge-south { background-color: var(--color-primary); color: #ffffff; }
+    .badge-central { background-color: var(--color-accent); color: var(--color-secondary); }
+    .badge-north { background-color: var(--color-primary-dark); color: #ffffff; }
+
+    .lga-meta-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: var(--fs-sm);
+    }
+
+    .lga-meta-list li {
+      margin-bottom: var(--space-2);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .filter-btn {
+      border-radius: var(--radius-pill);
+      padding: 0.4rem 1.25rem;
+      font-weight: var(--fw-medium);
+      font-size: var(--fs-sm);
+      border: 1px solid var(--color-border);
+      background-color: var(--color-surface);
+      color: var(--color-text-main);
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--color-primary);
+      color: #ffffff;
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small><i class="bi bi-geo-alt-fill me-1 text-accent"></i> Benin City, Edo State, Nigeria</small>
+      <div class="topbar-links">
+        <a href="pages/news.html" class="me-3"><i class="bi bi-newspaper me-1"></i> Press Releases</a>
+        <a href="lgas.html"><i class="bi bi-globe me-1"></i> LGA Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Crest & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Crest" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+        <div>
+          <div class="brand-text-title">EDSG</div>
+          <div class="brand-text-subtitle">Official State Portal</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        
+          <!-- 1. Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- 2. Governance Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="governanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Governance
+            </a>
+            <ul class="dropdown-menu shadow border-0" aria-labelledby="governanceDropdown">
+              <li><a class="dropdown-item" href="goverance/executive-cabinet.html"><i class="bi bi-person-badge me-2 text-accent"></i> Executive Leadership</a></li>
+              <li><a class="dropdown-item" href="goverance/legislature.html"><i class="bi bi-bank me-2 text-accent"></i> House of Assembly</a></li>
+              <li><a class="dropdown-item" href="goverance/judiciary.html"><i class="bi bi-shield-shaded me-2 text-accent"></i> Judiciary</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MDAs Directory -->
+          <li class="nav-item">
+            <a class="nav-link" href="mdas.html">MDAs Directory</a>
+          </li>
+
+          <!-- 4. E-Services -->
+          <li class="nav-item">
+            <a class="nav-link" href="e-services.html">E-Services</a>
+          </li>
+
+          <!-- 5. LGAs Portal -->
+          <li class="nav-item">
+            <a class="nav-link active" href="lgas.html">LGAs Portal</a>
+          </li>
+
+          <!-- Citizen Portal CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="e-services.html" class="btn btn-accent btn-sm text-uppercase fw-semibold"><i class="bi bi-laptop me-1"></i> Citizen Portal</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-page-banner">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-lg-8">
+          <span class="badge bg-accent text-dark mb-2 px-3 py-1 text-uppercase fw-bold">Municipal Administration</span>
+          <h1 class="text-white fw-bold display-5 mb-2">Local Government Areas</h1>
+          <p class="text-light opacity-75 lead mb-0">
+            Explore the 18 Local Government Areas across Edo South, Edo Central, and Edo North Senatorial Districts.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <div class="d-inline-block text-center p-3 rounded bg-dark-card border border-dark-subtle text-white">
+            <div class="h2 fw-bold text-white mb-0">18</div>
+            <div class="small text-uppercase fw-bold text-light opacity-75">Administrative LGAs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="section-padding bg-alt-section">
+    <div class="container">
+
+      <!-- Search & Filter Controls -->
+      <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-3 p-md-4">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-5">
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="lgaSearchInput" class="form-control bg-light border-start-0" placeholder="Search LGA name or headquarters...">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="d-flex flex-wrap gap-2 justify-content-md-end" id="filterContainer">
+                <button class="filter-btn active" data-district="all">All Districts</button>
+                <button class="filter-btn" data-district="Edo South">Edo South</button>
+                <button class="filter-btn" data-district="Edo Central">Edo Central</button>
+                <button class="filter-btn" data-district="Edo North">Edo North</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LGA Cards Grid -->
+      <div class="row g-4" id="lgaGrid"></div>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Seal" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+            <div>
+              <h5 class="mb-0 text-white fw-bold">Edo State Government</h5>
+              <small class="text-accent">Official Gateway Portal</small>
+            </div>
+          </div>
+          <p class="text-light opacity-75 small mb-3">
+            “Strengthening Peace… SHINE Agenda”
+          </p>
+          <div class="social-links d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Government -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white">Government</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Government</a></li>
+            <li><a href="goverance/executive-cabinet.html">Office of the Governor</a></li>
+            <li><a href="mdas.html">MDAs Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Policies -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Policies</h5>
+          <ul class="footer-links">
+            <li><a href="e-services.html">Health</a></li>
+            <li><a href="e-services.html">Welfare</a></li>
+            <li><a href="e-services.html">Employment</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: About -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">About</h5>
+          <ul class="footer-links">
+            <li><a href="lgas.html">People</a></li>
+            <li><a href="pages/visit-edo.html">Visit Edo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="small mb-0 text-light opacity-75">
+          &copy; 2026 Edo State Government. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- LGA Interactive JavaScript -->
+  <script>
+    const lgaData = [
+      { name: "Oredo", district: "Edo South", hq: "Benin City", focus: "Commerce, Culture & Governance" },
+      { name: "Ikpoba-Okha", district: "Edo South", hq: "Idogbo", focus: "Industrial Estates & Manufacturing" },
+      { name: "Egor", district: "Edo South", hq: "Uselu", focus: "Education & Commercial Trade" },
+      { name: "Ovia North-East", district: "Edo South", hq: "Okada", focus: "Agriculture & Higher Education" },
+      { name: "Ovia South-West", district: "Edo South", hq: "Iguobazuwa", focus: "Forestry & Agricultural Processing" },
+      { name: "Orhionmwon", district: "Edo South", hq: "Abudu", focus: "Oil Palm Belt & Energy Infrastructure" },
+      { name: "Uhunmwonde", district: "Edo South", hq: "Ehor", focus: "Farming & Transit Trade Hubs" },
+      { name: "Esan West", district: "Edo Central", hq: "Ekpoma", focus: "Education & Grains Production" },
+      { name: "Esan Central", district: "Edo Central", hq: "Irrua", focus: "Specialist Healthcare & Agriculture" },
+      { name: "Esan North-East", district: "Edo Central", hq: "Uromi", focus: "Commerce & Central Logistics" },
+      { name: "Esan South-East", district: "Edo Central", hq: "Ubiaja", focus: "Riverine Agriculture & Cassava Processing" },
+      { name: "Igueben", district: "Edo Central", hq: "Igueben", focus: "Cottage Industry & Agriculture" },
+      { name: "Etsako West", district: "Edo North", hq: "Auchi", focus: "Commercial Hub, Mining & Education" },
+      { name: "Etsako East", district: "Edo North", hq: "Agenebode", focus: "River Logistics & Agriculture" },
+      { name: "Etsako Central", district: "Edo North", hq: "Fugar", focus: "Farming & Aquaculture" },
+      { name: "Akoko-Edo", district: "Edo North", hq: "Igarra", focus: "Solid Minerals, Eco-Tourism & Heritage" },
+      { name: "Owan West", district: "Edo North", hq: "Sabongida-Ora", focus: "Cocoa, Timber & Agriculture" },
+      { name: "Owan East", district: "Edo North", hq: "Afuze", focus: "Agriculture & Sports Talent Development" }
+    ];
+
+    let currentDistrict = "all";
+
+    function getDistrictBadge(district) {
+      if (district === "Edo South") return "badge-south";
+      if (district === "Edo Central") return "badge-central";
+      return "badge-north";
+    }
+
+    function renderLGAs() {
+      const searchVal = document.getElementById("lgaSearchInput").value.toLowerCase().trim();
+      const grid = document.getElementById("lgaGrid");
+      grid.innerHTML = "";
+
+      const filtered = lgaData.filter(item => {
+        const matchesDistrict = currentDistrict === "all" || item.district === currentDistrict;
+        const matchesSearch = item.name.toLowerCase().includes(searchVal) ||
+                              item.hq.toLowerCase().includes(searchVal) ||
+                              item.focus.toLowerCase().includes(searchVal);
+        return matchesDistrict && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <i class="bi bi-inbox fs-1 text-muted d-block mb-2"></i>
+            <h5 class="text-secondary">No Local Government Areas Found</h5>
+            <p class="text-muted small">Try refining your search terms or changing your district filter.</p>
+          </div>`;
+        return;
+      }
+
+      filtered.forEach(lga => {
+        const col = document.createElement("div");
+        col.className = "col-md-6 col-lg-4";
+        col.innerHTML = `
+          <div class="lga-card">
+            <div class="lga-card-header d-flex justify-content-between align-items-center">
+              <h3 class="h5 mb-0 fw-bold text-secondary">${lga.name}</h3>
+              <span class="badge badge-senatorial ${getDistrictBadge(lga.district)}">${lga.district}</span>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <ul class="lga-meta-list mb-3">
+                <li>
+                  <span class="text-muted"><i class="bi bi-geo-alt me-1 text-primary"></i> Headquarter:</span>
+                  <span class="fw-bold text-dark">${lga.hq}</span>
+                </li>
+                <li>
+                  <span class="text-muted"><i class="bi bi-briefcase me-1 text-primary"></i> Economic Focus:</span>
+                </li>
+              </ul>
+              <p class="small text-muted flex-grow-1 mb-3">${lga.focus}</p>
+              <div class="pt-3 border-top mt-auto">
+                <a href="e-services.html" class="btn btn-outline-primary btn-sm w-100 fw-bold">
+                  <i class="bi bi-building me-1"></i> LGA Municipal Services
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(col);
+      });
+    }
+
+    document.getElementById("lgaSearchInput").addEventListener("input", renderLGAs);
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        e.target.classList.add("active");
+        currentDistrict = e.target.getAttribute("data-district");
+        renderLGAs();
+      });
+    });
+
+    window.addEventListener("DOMContentLoaded", renderLGAs);
+  </script>
+</body>
+</html>

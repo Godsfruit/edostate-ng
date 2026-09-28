@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital E-Services Portal | Edo State Government</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Design System & Overrides -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small><i class="bi bi-shield-check me-1 text-accent"></i> Official Edo State Digital Public Services Portal</small>
+      <div class="topbar-links">
+        <a href="mdas.html" class="me-3"><i class="bi bi-building me-1"></i> MDAs Directory</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Crest & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Crest" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+        <div>
+          <div class="brand-text-title">EDSG</div>
+          <div class="brand-text-subtitle">Official State Portal</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        
+          <!-- 1. Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- 2. Governance Dropdown (Consolidates Executive, Legislature & Judiciary) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="governanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Governance
+            </a>
+            <ul class="dropdown-menu shadow border-0" aria-labelledby="governanceDropdown">
+              <li><a class="dropdown-item" href="goverance/executive-cabinet.html"><i class="bi bi-person-badge me-2 text-accent"></i> Executive Leadership</a></li>
+              <li><a class="dropdown-item" href="goverance/legislature.html"><i class="bi bi-bank me-2 text-accent"></i> House of Assembly</a></li>
+              <li><a class="dropdown-item" href="goverance/judiciary.html"><i class="bi bi-shield-shaded me-2 text-accent"></i> Judiciary</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MDAs Directory -->
+          <li class="nav-item">
+            <a class="nav-link" href="mdas.html">MDAs Directory</a>
+          </li>
+
+          <!-- 4. E-Services -->
+          <li class="nav-item">
+            <a class="nav-link active" href="e-services.html">E-Services</a>
+          </li>
+
+          <!-- 5. LGAs Portal -->
+          <li class="nav-item">
+            <a class="nav-link" href="lgas.html">LGAs Portal</a>
+          </li>
+
+          <!-- Citizen Portal CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="e-services.html" class="btn btn-accent btn-sm text-uppercase fw-semibold"><i class="bi bi-laptop me-1"></i> Citizen Portal</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO BANNER
+     ========================================================================= -->
+  <section class="page-banner position-relative py-5 bg-dark-theme text-white overflow-hidden" style="background: var(--color-bg-dark);">
+    <div class="container position-relative py-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html" class="text-accent text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active text-light opacity-75" aria-current="page">E-Services Gateway</li>
+        </ol>
+      </nav>
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-5 fw-bold text-white mb-2">Edo State Digital Public Gateway</h1>
+          <p class="lead text-light opacity-75 mb-0">
+            Apply for land titles (C-of-O), file tax returns, register corporate vendors, and process state permits online 24/7 without physical queuing.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <div class="bg-white bg-opacity-10 p-3 rounded-3 border border-light border-opacity-25 d-inline-block text-start">
+            <div class="d-flex align-items-center mb-1">
+              <i class="bi bi-check-circle-fill text-accent me-2 fs-5"></i>
+              <span class="fw-bold">100% Paperless Processing</span>
+            </div>
+            <small class="text-light opacity-75 d-block">Instant automated receipts & digital verification codes.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEARCH & CATEGORY FILTERS
+     ========================================================================= -->
+  <section class="py-4 bg-alt-section border-bottom sticky-md-top" style="top: 70px; z-index: 990;">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <!-- Live Search Input -->
+        <div class="col-lg-5">
+          <div class="input-group shadow-sm">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+            <input type="text" id="eserviceSearchInput" class="form-control border-start-0 ps-0" placeholder="Search service (e.g. C-of-O, Tax, TIN, Vendor, Permit)...">
+          </div>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="col-lg-7 text-lg-end">
+          <div class="btn-group filter-btn-group shadow-sm d-flex flex-column flex-sm-row w-100 w-lg-auto" role="group" aria-label="Filter E-Services">
+            <button type="button" class="btn btn-outline-primary active mb-2 mb-sm-0" data-service-filter="all">All Services</button>
+            <button type="button" class="btn btn-outline-primary mb-2 mb-sm-0" data-service-filter="land">Land & Title</button>
+            <button type="button" class="btn btn-outline-primary mb-2 mb-sm-0" data-service-filter="tax">Taxes & Revenue</button>
+            <button type="button" class="btn btn-outline-primary mb-2 mb-sm-0" data-service-filter="business">Business & Trade</button>
+            <button type="button" class="btn btn-outline-primary" data-service-filter="procurement">Procurement</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       E-SERVICES CARDS GRID
+     ========================================================================= -->
+  <section class="section-padding bg-surface" id="servicesGrid">
+    <div class="container">
+      <div class="row g-4" id="eserviceCardsGrid">
+
+        <!-- 1. EDOGIS C-of-O Portal -->
+        <div class="col-md-6 col-lg-4 eservice-card-item" data-category="land" data-search="edogis land c-of-o certificate of occupancy deed survey search verification plot title">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="badge-icon bg-primary-subtle text-primary rounded-3 p-3 fs-4">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill"><i class="bi bi-lightning-fill me-1"></i> Active Gateway</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">EDOGIS Portal</span>
+              <h3 class="h5 fw-bold mb-2">Certificate of Occupancy (C-of-O)</h3>
+              <p class="text-muted fs-xs mb-3">
+                Submit digital applications, track title processing status, conduct land search verification, and obtain automated C-of-O certificates.
+              </p>
+            </div>
+            <div>
+              <div class="bg-alt-section rounded-2 p-2 mb-3 fs-xs text-muted">
+                <i class="bi bi-clock me-1 text-accent"></i> Processing Time: <strong>30 Working Days</strong>
+              </div>
+              <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-title="Digital C-of-O Application (EDOGIS)" data-service-mda="Edo Geographic Information Service (EDOGIS)" data-service-requirements="Registered Survey Plan, Valid State Identification (NIN / Driver's License), Tax Clearance Certificate, Proof of Ownership." data-service-timeline="30 Working Days" data-service-link="https://edogis.edostate.gov.ng">
+                Launch Portal Gateway <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. EIRS Self-Service Tax Portal -->
+        <div class="col-md-6 col-lg-4 eservice-card-item" data-category="tax" data-search="eirs tax pay tin tax identification number income tax receipt clearance certificate revenue">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="badge-icon bg-warning-subtle text-dark rounded-3 p-3 fs-4">
+                  <i class="bi bi-cash-stack"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill"><i class="bi bi-lightning-fill me-1"></i> Active Gateway</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">EIRS TaxPay</span>
+              <h3 class="h5 fw-bold mb-2">State Tax & TIN Portal</h3>
+              <p class="text-muted fs-xs mb-3">
+                Generate state Tax Identification Number (TIN), compute personal income tax, pay direct assessments, and print Tax Clearance Certificates.
+              </p>
+            </div>
+            <div>
+              <div class="bg-alt-section rounded-2 p-2 mb-3 fs-xs text-muted">
+                <i class="bi bi-lightning me-1 text-accent"></i> Settlement: <strong>Instant Auto-Receipt</strong>
+              </div>
+              <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-title="EIRS Tax Registration & Assessment Portal" data-service-mda="Edo State Internal Revenue Service (EIRS)" data-service-requirements="NIN, Corporate CAC Registration Number (for businesses), Active Phone Number, Email Address." data-service-timeline="Instant Download" data-service-link="https://eirs.gov.ng">
+                Launch Portal Gateway <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. EDSMPPA Contractor e-Procurement -->
+        <div class="col-md-6 col-lg-4 eservice-card-item" data-category="procurement" data-search="edsmppa procurement contractor registration tenders bids legal compliance certificates vendor portal">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="badge-icon bg-success-subtle text-success rounded-3 p-3 fs-4">
+                  <i class="bi bi-briefcase-fill"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill"><i class="bi bi-lightning-fill me-1"></i> Active Gateway</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">EDSMPPA Portal</span>
+              <h3 class="h5 fw-bold mb-2">e-Procurement & Contractor System</h3>
+              <p class="text-muted fs-xs mb-3">
+                Register as a state contractor, view published tenders, download bid compliance documentation, and request procurement clearance.
+              </p>
+            </div>
+            <div>
+              <div class="bg-alt-section rounded-2 p-2 mb-3 fs-xs text-muted">
+                <i class="bi bi-clock me-1 text-accent"></i> Verification: <strong>3-5 Working Days</strong>
+              </div>
+              <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-title="Contractor Registration & e-Procurement Portal" data-service-mda="Edo State Public Procurement Agency (EDSMPPA)" data-service-requirements="CAC Documents, EIRS Tax Clearance, Company Profile, Audited Financial Accounts (3 years), Technical Key Personnel CVs." data-service-timeline="3-5 Working Days" data-service-link="https://edprocurement.gov.ng">
+                Launch Portal Gateway <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Business Operational Permit Portal -->
+        <div class="col-md-6 col-lg-4 eservice-card-item" data-category="business" data-search="business permit trade license commercial store signpost premises registration ministry of wealth">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="badge-icon bg-info-subtle text-info rounded-3 p-3 fs-4">
+                  <i class="bi bi-shop"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill"><i class="bi bi-lightning-fill me-1"></i> Active Gateway</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">Business Gateway</span>
+              <h3 class="h5 fw-bold mb-2">Business Premises & Trade Permit</h3>
+              <p class="text-muted fs-xs mb-3">
+                Apply for commercial establishment permits, signage authorization, and trade registration across all 18 Local Government Areas.
+              </p>
+            </div>
+            <div>
+              <div class="bg-alt-section rounded-2 p-2 mb-3 fs-xs text-muted">
+                <i class="bi bi-clock me-1 text-accent"></i> Processing Time: <strong>24-48 Hours</strong>
+              </div>
+              <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-title="Business Premises & Trade License Portal" data-service-mda="Ministry of Business, Trade & Industry" data-service-requirements="CAC Certificate, Proof of Business Location / Lease, Business Identification Number (BIN)." data-service-timeline="24-48 Hours" data-service-link="#">
+                Launch Portal Gateway <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. EIRS Land Use Charge (LUC) -->
+        <div class="col-md-6 col-lg-4 eservice-card-item" data-category="land" data-search="land use charge luc property rate ground rent building tax real estate assessment eirs">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="badge-icon bg-warning-subtle text-dark rounded-3 p-3 fs-4">
+                  <i class="bi bi-house-check-fill"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill"><i class="bi bi-lightning-fill me-1"></i> Active Gateway</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">EIRS LUC System</span>
+              <h3 class="h5 fw-bold mb-2">Land Use Charge (LUC) Verification</h3>
+              <p class="text-muted fs-xs mb-3">
+                Verify property demand notices, calculate annual Land Use Charges online, download official receipts, and resolve valuation appeals.
+              </p>
+            </div>
+            <div>
+              <div class="bg-alt-section rounded-2 p-2 mb-3 fs-xs text-muted">
+                <i class="bi bi-lightning me-1 text-accent"></i> Verification: <strong>Instant Query</strong>
+              </div>
+              <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-title="Land Use Charge Payment & Inquiry Gateway" data-service-mda="Edo State Internal Revenue Service (EIRS)" data-service-requirements="Property Identification Number (PIN) or Registered Land Survey Number." data-service-timeline="Instant Portal Query" data-service-link="https://eirs.gov.ng">
+                Launch Portal Gateway <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Building Plan Approval Portal -->
+        <div class="col-md-6 col-lg-4 eservice-card-item" data-category="land" data-search="building plan approval construction permit architectural review physical planning urban development">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="badge-icon bg-danger-subtle text-danger rounded-3 p-3 fs-4">
+                  <i class="bi bi-building-add"></i>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill"><i class="bi bi-lightning-fill me-1"></i> Active Gateway</span>
+              </div>
+              <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">Physical Planning</span>
+              <h3 class="h5 fw-bold mb-2">Building Plan Approval Portal</h3>
+              <p class="text-muted fs-xs mb-3">
+                Submit architectural, structural, and MEP engineering drawings online for state physical planning inspection and approval.
+              </p>
+            </div>
+            <div>
+              <div class="bg-alt-section rounded-2 p-2 mb-3 fs-xs text-muted">
+                <i class="bi bi-clock me-1 text-accent"></i> Processing Time: <strong>14 Working Days</strong>
+              </div>
+              <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-title="Building Plan Approval System" data-service-mda="Ministry of Physical Planning, Housing, Urban & Regional Development" data-service-requirements="Architectural Drawings (PDF), Structural Stability Calculations, Survey Plan, EDOGIS C-of-O or Land Title Document." data-service-timeline="14 Working Days" data-service-link="#">
+                Launch Portal Gateway <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No Matching Search Results State -->
+      <div id="noServiceResults" class="text-center py-5 d-none">
+        <div class="fs-1 text-muted mb-2"><i class="bi bi-search-heart"></i></div>
+        <h3 class="h5 text-secondary fw-bold">No Matching Digital Gateway Found</h3>
+        <p class="text-muted small">Try refining your keyword or resetting your filter category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       APPLICATION FEE ESTIMATOR WIDGET SECTION
+     ========================================================================= -->
+  <section class="section-padding bg-alt-section border-top border-bottom">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase fs-xs mb-2">Fee Transparency Tool</span>
+          <h2 class="h3 fw-bold text-secondary mb-3">Quick Fee Estimator</h2>
+          <p class="text-muted fs-sm mb-4">
+            Calculate estimated statutory government processing fees before submitting your application. Final fees are subject to technical site surveys and document verification.
+          </p>
+          <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border border-light">
+            <i class="bi bi-info-circle-fill text-accent fs-3 me-3"></i>
+            <small class="text-muted">
+              All official government fees are payable exclusively via EIRS electronic channels (Remita, WebPAY, POS) with automated state receipts.
+            </small>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm rounded-3 p-4 bg-white">
+            <h3 class="h6 fw-bold text-secondary mb-3 pb-2 border-bottom"><i class="bi bi-calculator me-2 text-accent"></i> Select Application Parameters</h3>
+            <form id="feeCalculatorForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="calcServiceType" class="form-label fs-xs fw-bold text-uppercase text-muted">Service Category</label>
+                  <select class="form-select fs-sm" id="calcServiceType" required>
+                    <option value="cofo_residential">EDOGIS C-of-O (Residential Plot)</option>
+                    <option value="cofo_commercial">EDOGIS C-of-O (Commercial Plot)</option>
+                    <option value="building_plan">Building Plan Approval (Residential)</option>
+                    <option value="vendor_reg">Contractor Registration (EDSMPPA Category A)</option>
+                    <option value="biz_permit">Business Premises Permit (Commercial)</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="calcPropertySize" class="form-label fs-xs fw-bold text-uppercase text-muted">Size / Scale (Sqm / Class)</label>
+                  <select class="form-select fs-sm" id="calcPropertySize">
+                    <option value="standard">Standard (Under 1,000 Sqm / Small Scale)</option>
+                    <option value="medium">Medium (1,000 - 3,000 Sqm / Medium Scale)</option>
+                    <option value="large">Large / Industrial (Over 3,000 Sqm / High Scale)</option>
+                  </select>
+                </div>
+                      <!--GF correction-->
+                <div class="col-12 mt-4">
+                  <div class="p-3 bg-primary-subtle rounded-3 d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
+                    <div class="mb-3 mb-sm-0">
+                      <small class="text-uppercase fw-bold text-muted fs-xs d-block">Estimated Statutory Fee</small>
+                      <h4 class="h3 fw-bold text-primary mb-0" id="estimatedFeeDisplay">₦ 50,000</h4>
+                    </div>
+                    <a href="#servicesGrid" class="btn btn-primary btn-sm fw-semibold w-100 w-sm-auto">Proceed to Portal</a>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SERVICE DETAIL MODAL
+     ========================================================================= -->
+  <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-dark-theme text-white border-0">
+          <h5 class="modal-title fw-bold" id="serviceModalLabel">Gateway Overview</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <h3 id="modalServiceTitle" class="h5 fw-bold text-secondary mb-1">Service Title</h3>
+          <p id="modalServiceMda" class="text-accent fw-semibold fs-xs mb-3">Managing Agency</p>
+          
+          <div class="bg-alt-section rounded-3 p-3 mb-3">
+            <h4 class="h6 fw-bold text-uppercase fs-xs text-secondary mb-2"><i class="bi bi-file-check me-1 text-accent"></i> Mandatory Requirements</h4>
+            <p id="modalServiceRequirements" class="text-muted fs-sm mb-0">List of required documents...</p>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between fs-sm text-muted border-top pt-2">
+            <span>Processing Service SLA:</span>
+            <strong id="modalServiceTimeline" class="text-secondary">N/A</strong>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <a id="modalServiceLinkBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-accent btn-sm">Launch Portal <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER SECTION
+     ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Seal" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+            <div>
+              <h5 class="mb-0 text-white fw-bold">Edo State Government</h5>
+              <small class="text-accent">E-Services Gateway</small>
+            </div>
+          </div>
+          <p class="text-light opacity-75 small mb-3">
+            “Transforming public administration through digital innovation, transparency, and seamless citizen access.”
+          </p>
+        </div>
+
+        <!-- Column 2: Governance -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white">Governance</h5>
+          <ul class="footer-links">
+            <li><a href="legislature.html">House of Assembly</a></li>
+            <li><a href="executive-cabinet.html">Executive Council</a></li>
+            <li><a href="mdas.html">MDAs Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Digital Portals</h5>
+          <ul class="footer-links">
+            <li><a href="https://edogis.edostate.gov.ng" target="_blank" rel="noopener">EDOGIS Land Portal</a></li>
+            <li><a href="https://eirs.gov.ng" target="_blank" rel="noopener">EIRS Tax Management</a></li>
+            <li><a href="https://edprocurement.gov.ng" target="_blank" rel="noopener">State Public Procurement</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Digital Support</h5>
+          <p class="text-light opacity-75 small mb-1"><i class="bi bi-headset me-1 text-accent"></i> ICT Agency, Block B, Secretariat</p>
+          <p class="text-light opacity-75 small mb-1"><i class="bi bi-envelope me-1 text-accent"></i> eservices@edostate.gov.ng</p>
+          <p class="text-light opacity-75 small"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 800 336 4300</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="small mb-0 text-light opacity-75">
+          &copy; 2026 Government of Edo State, Nigeria. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Dynamic Search, Filters, Fee Estimator & Modal Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Live Search & Category Filtering
+      const searchInput = document.getElementById('eserviceSearchInput');
+      const filterButtons = document.querySelectorAll('.filter-btn-group button');
+      const serviceItems = document.querySelectorAll('.eservice-card-item');
+      const noResults = document.getElementById('noServiceResults');
+
+      let currentCategory = 'all';
+
+      function filterServices() {
+        const query = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        serviceItems.forEach(item => {
+          const categoryMatch = (currentCategory === 'all' || item.getAttribute('data-category') === currentCategory);
+          const textMatch = query === '' || item.getAttribute('data-search').toLowerCase().includes(query) || item.innerText.toLowerCase().includes(query);
+
+          if (categoryMatch && textMatch) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResults.classList.remove('d-none');
+        } else {
+          noResults.classList.add('d-none');
+        }
+      }
+
+      searchInput.addEventListener('keyup', filterServices);
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentCategory = button.getAttribute('data-service-filter');
+          filterServices();
+        });
+      });
+
+      // 2. Populate Dynamic Modal
+      const serviceModal = document.getElementById('serviceModal');
+      serviceModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget;
+        
+        document.getElementById('modalServiceTitle').innerText = button.getAttribute('data-service-title');
+        document.getElementById('modalServiceMda').innerText = button.getAttribute('data-service-mda');
+        document.getElementById('modalServiceRequirements').innerText = button.getAttribute('data-service-requirements');
+        document.getElementById('modalServiceTimeline').innerText = button.getAttribute('data-service-timeline');
+        document.getElementById('modalServiceLinkBtn').setAttribute('href', button.getAttribute('data-service-link'));
+      });
+
+      // 3. Dynamic Application Fee Estimator Logic
+      const serviceTypeSelect = document.getElementById('calcServiceType');
+      const sizeSelect = document.getElementById('calcPropertySize');
+      const feeDisplay = document.getElementById('estimatedFeeDisplay');
+
+      const feeTable = {
+        cofo_residential: { standard: 50000, medium: 95000, large: 180000 },
+        cofo_commercial: { standard: 120000, medium: 250000, large: 500000 },
+        building_plan: { standard: 35000, medium: 75000, large: 160000 },
+        vendor_reg: { standard: 25000, medium: 50000, large: 100000 },
+        biz_permit: { standard: 15000, medium: 35000, large: 75000 }
+      };
+
+      function calculateFee() {
+        const type = serviceTypeSelect.value;
+        const scale = sizeSelect.value;
+        const amount = feeTable[type][scale];
+
+        feeDisplay.innerText = '₦ ' + amount.toLocaleString('en-NG');
+      }
+
+      serviceTypeSelect.addEventListener('change', calculateFee);
+      sizeSelect.addEventListener('change', calculateFee);
+    });
+  </script>
+</body>
+</html>

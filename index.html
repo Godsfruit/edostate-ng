@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edo State Government | Official Gateway</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Design System & Overrides -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small><i class="bi bi-geo-alt-fill me-1 text-accent"></i> Benin City, Edo State, Nigeria</small>
+      <div class="topbar-links">
+        <a href="#news" class="me-3"><i class="bi bi-newspaper me-1"></i> Press Releases</a>
+        <a href="#explore"><i class="bi bi-globe me-1"></i> LGA Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Crest & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Crest" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+        <div>
+          <div class="brand-text-title">EDSG</div>
+          <div class="brand-text-subtitle">Official State Portal</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        
+          <!-- 1. Home -->
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <!-- 2. Governance Dropdown (Consolidates Executive, Legislature & Judiciary) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="governanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Governance
+            </a>
+            <ul class="dropdown-menu shadow border-0" aria-labelledby="governanceDropdown">
+              <li><a class="dropdown-item" href="goverance/executive-cabinet.html"><i class="bi bi-person-badge me-2 text-accent"></i> Executive Leadership</a></li>
+              <li><a class="dropdown-item" href="goverance/legislature.html"><i class="bi bi-bank me-2 text-accent"></i> House of Assembly</a></li>
+              <li><a class="dropdown-item" href="goverance/judiciary.html"><i class="bi bi-shield-shaded me-2 text-accent"></i> Judiciary</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MDAs Directory -->
+          <li class="nav-item">
+            <a class="nav-link" href="mdas.html">MDAs Directory</a>
+          </li>
+
+          <!-- 4. E-Services -->
+          <li class="nav-item">
+            <a class="nav-link" href="e-services.html">E-Services</a>
+          </li>
+
+          <!-- 5. LGAs Portal -->
+          <li class="nav-item">
+            <a class="nav-link" href="lgas.html">LGAs Portal</a>
+          </li>
+
+          <!-- Citizen Portal CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="e-services.html" class="btn btn-accent btn-sm text-uppercase fw-semibold"><i class="bi bi-laptop me-1"></i> Citizen Portal</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       1. HERO SECTION (Video Background + Glassmorphism Overlay)
+     ========================================================================= -->
+  <section class="hero-section position-relative overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="hero-video-bg">
+      <source src="assets/videos/busy-nigerian-road.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+
+    <div class="container position-relative py-5">
+      <div class="row align-items-center gy-4 min-vh-50">
+        <!-- Main Hero Card -->
+        <div class="col-lg-8">
+          <div class="glass-card hero-glass-box p-4 p-md-5">
+            <span class="badge bg-accent text-dark mb-3 px-3 py-2 text-uppercase fw-bold">Official Gateway</span>
+            <h1 class="hero-title text-start mb-3">Welcome to Edo State</h1>
+            <p class="hero-lead mb-0">
+              Edostate.gov.ng is the official gateway to government services, updates, and opportunities in Edo State.
+            </p>
+          </div>
+        </div>
+
+        <!-- Location Tag Card -->
+        <div class="col-lg-4 d-flex justify-content-lg-end">
+          <div class="glass-card location-tag-box p-3 d-inline-flex align-items-center">
+            <div class="location-icon-wrapper me-3">
+              <i class="bi bi-geo-alt-fill text-accent fs-3"></i>
+            </div>
+            <div>
+              <small class="text-uppercase text-light opacity-75 d-block fw-bold fs-xs">Current Location Focus</small>
+              <span class="fw-bold text-white fs-md">Ring Road, Benin City</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. LEADERSHIP SECTION (Glassmorphism Cards)
+     ========================================================================= -->
+  <section id="leadership" class="section-padding bg-alt-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 section-title">State Leadership</h2>
+        <p class="text-muted">Guiding Edo State towards sustainable growth, peace, and industrial innovation.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1: Governor -->
+        <div class="col-md-6 col-lg-5">
+          <div class="glass-card leadership-card h-100 p-4 text-center">
+            <div class="portrait-wrapper mb-4 text-center">
+              <img 
+                src="assets/images/leadership/governor.jpg" 
+                alt="Deputy Governor of Edo State" 
+                class="img-fluid rounded shadow-sm"
+                onerror="this.src='https://placehold.co/400x400/1C3942/FFFFFF?text=Deputy+Governor+Portrait'">
+            </div>
+
+            <h3 class="h4 mb-1 text-secondary">Senator Monday Okpebholo</h3>
+            <p class="text-accent fw-bold mb-3">Executive Governor of Edo State</p>
+            <p class="text-muted small mb-0">
+              Committed to security, infrastructure renewal, agricultural revolution, and human capital development across all Edo State senatorial districts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Deputy Governor -->
+        <div class="col-md-6 col-lg-5">
+          <div class="glass-card leadership-card h-100 p-4 text-center">
+            <div class="portrait-wrapper mb-4 text-center">
+              <img 
+                src="assets/images/leadership/deputy-governor.jpg" 
+                alt="Deputy Governor of Edo State" 
+                class="img-fluid rounded shadow-sm"
+                onerror="this.src='https://placehold.co/400x400/1C3942/FFFFFF?text=Deputy+Governor+Portrait'">
+            </div>
+
+            <h3 class="h4 mb-1 text-secondary">Rt. Hon. Dennis Idahosa</h3>
+            <p class="text-accent fw-bold mb-3">Deputy Governor of Edo State</p>
+            <p class="text-muted small mb-0">
+              Supporting executive governance, youth empowerment drives, public service efficiency, and community development programs state-wide.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. QUICK STATS SECTION (Dark Background)
+     ========================================================================= -->
+  <section id="stats" class="section-padding bg-dark-theme text-white" style="background-color: var(--color-bg-dark);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 text-white mb-2">Edo State by the Numbers…</h2>
+        <p class="text-light opacity-75">Statistics for informed decision-making.</p>
+      </div>
+
+      <div class="row g-4 text-center">
+        <!-- Info Box 1: Land Mass -->
+        <div class="col-md-4">
+          <div class="stat-card p-4 h-100 rounded-3" style="border: 1px solid var(--color-accent);">
+            <div class="stat-icon mb-3"><i class="bi bi-map text-accent display-5"></i></div>
+            <h3 class="display-6 fw-bold text-white mb-2">Approx. 17,800 km²</h3>
+            <p class="text-uppercase text-light opacity-75 fw-bold fs-sm mb-0">Total Land Mass</p>
+          </div>
+        </div>
+
+        <!-- Info Box 2: Population -->
+        <div class="col-md-4">
+          <div class="stat-card p-4 h-100 rounded-3" style="border: 1px solid var(--color-accent);">
+            <div class="stat-icon mb-3"><i class="bi bi-people text-accent display-5"></i></div>
+            <h3 class="display-6 fw-bold text-white mb-2">4.7+ Million</h3>
+            <p class="text-uppercase text-light opacity-75 fw-bold fs-sm mb-0">Estimated Population</p>
+          </div>
+        </div>
+
+        <!-- Info Box 3: LGAs -->
+        <div class="col-md-4">
+          <div class="stat-card p-4 h-100 rounded-3" style="border: 1px solid var(--color-accent);">
+            <div class="stat-icon mb-3"><i class="bi bi-building-gear text-accent display-5"></i></div>
+            <h3 class="display-6 fw-bold text-white mb-2">18 LGAs</h3>
+            <p class="text-uppercase text-light opacity-75 fw-bold fs-sm mb-0">Local Government Areas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. EXPLORE SECTION (Dark Background + Smart Map)
+     ========================================================================= -->
+  <section id="explore" class="section-padding bg-darker-theme text-white" style="background-color: var(--color-bg-dark);">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="text-accent fw-bold text-uppercase fs-sm d-block mb-2">Interactive Territory Map</span>
+          <h2 class="h1 text-white mb-3">Explore Edo Local Government Areas</h2>
+          <p class="text-light opacity-75 mb-4">
+            Gain quick insights into Edo State's 18 Local Government Areas, regional economic hubs, industrial zones, and civic infrastructure.
+          </p>
+          <div class="cta-box p-4 rounded-3 bg-dark-card border border-dark-subtle mb-4">
+            <h4 class="h5 text-white mb-2">Want to learn more about Edo State?</h4>
+            <p class="text-muted small mb-3">Access detailed demographics, cultural heritage, and municipal administration records.</p>
+            <a href="#explore" class="btn btn-accent btn-lg text-uppercase fw-bold">
+              <i class="bi bi-compass me-2"></i>Explore Edo LGAs
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <div class="map-wrapper p-3 rounded-3 bg-dark-card border border-dark-subtle">
+            <img src="assets/images/banners/edo-map.svg" alt="Image showing the map of Benin" class="img-fluid rounded shadow-lg map-img" onerror="this.src='https://placehold.co/600x400/1C3942/E2A123?text=Map+showing+the+map+of+Benin'">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       5. NEWS SECTION
+     ========================================================================= -->
+  <section id="news" class="section-padding bg-alt-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 section-title">Edo State Updates and Information…</h2>
+        <p class="text-muted">Find out what Edo has been up to.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- News Card 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 service-card border-0 shadow-sm">
+            <img src="assets/images/news/news-1.webp" class="card-img-top news-card-img" alt="Edo State Infrastructure Project" onerror="this.src='https://placehold.co/600x380/28505C/FFFFFF?text=Infrastructure+Update'">
+            <div class="card-body p-4">
+              <span class="badge bg-primary-subtle text-primary mb-2">Infrastructure</span>
+              <h3 class="h5 card-title mb-2">Urban Road Expansion Projects Accelerate in Benin Metropolis</h3>
+              <p class="card-text text-muted small">
+                State Ministry of Works inspects progress on key arterial roads linking Ring Road to commercial hubs.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <a href="pages/news.html" class="fw-bold text-primary small">Read Full Press Release &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 service-card border-0 shadow-sm">
+            <img src="assets/images/news/news-2.webp" class="card-img-top news-card-img" alt="Edo State Digital Economy Drive" onerror="this.src='https://placehold.co/600x380/11252C/FFFFFF?text=Digital+Governance'">
+            <div class="card-body p-4">
+              <span class="badge bg-accent-subtle text-dark mb-2">Digital Economy</span>
+              <h3 class="h5 card-title mb-2">Edo Digital Gateway Portal Launches E-Services Upgrade</h3>
+              <p class="card-text text-muted small">
+                New online verification systems simplify land titling, business registration, and revenue payments.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <a href="pages/news.html" class="fw-bold text-primary small">Read Full Press Release &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 service-card border-0 shadow-sm">
+            <img src="assets/images/news/news-3.webp" class="card-img-top news-card-img" alt="Edo Agriculture Initiative" onerror="this.src='https://placehold.co/600x380/1C3942/FFFFFF?text=Agro-Innovation'">
+            <div class="card-body p-4">
+              <span class="badge bg-primary-subtle text-primary mb-2">Agriculture</span>
+              <h3 class="h5 card-title mb-2">Agro-Industrial Zones Expansion Boosts Farmer Support</h3>
+              <p class="card-text text-muted small">
+                State agricultural support programs distribute high-yield seedlings and equipment across oil palm belts.
+              </p>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <a href="pages/news.html" class="fw-bold text-primary small">Read Full Press Release &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. VISIT SECTION (Carousel Slider)
+     ========================================================================= -->
+  <section id="visit" class="section-padding bg-surface">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="h1 section-title">Want to travel around Edo?</h2>
+        <p class="text-muted">Discover some of the beautiful locations across the state.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Bootstrap Carousel Slider -->
+          <div id="visitEdoCarousel" class="carousel slide rounded-3 overflow-hidden shadow-lg mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#visitEdoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#visitEdoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#visitEdoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <img src="assets/images/banners/royal-palace.jpg" class="d-block w-100 carousel-slide-img" alt="Royal Palace of the Oba of Benin" onerror="this.src='https://placehold.co/1200x500/28505C/FFFFFF?text=Royal+Palace+of+the+Oba+of+Benin'">
+                <div class="carousel-caption d-none d-md-block glass-card p-3">
+                  <h5 class="text-white fw-bold mb-1">Royal Palace of the Oba of Benin</h5>
+                  <p class="small mb-0">A UNESCO World Heritage site and centerpiece of ancient Edo bronze culture.</p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <img src="assets/images/banners/okomu-national-park.jpg" class="d-block w-100 carousel-slide-img" alt="Okomu National Park" onerror="this.src='https://placehold.co/1200x500/1C3942/FFFFFF?text=Okomu+National+Park'">
+                <div class="carousel-caption d-none d-md-block glass-card p-3">
+                  <h5 class="text-white fw-bold mb-1">Okomu National Park & Rainforest</h5>
+                  <p class="small mb-0">Home to endangered white-throated monkeys and lush tropical flora.</p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <img src="assets/images/banners/somorika-hills.jpg" class="d-block w-100 carousel-slide-img" alt="Somorika Hills" onerror="this.src='https://placehold.co/1200x500/11252C/FFFFFF?text=Somorika+Hills+Akoko-Edo'">
+                <div class="carousel-caption d-none d-md-block glass-card p-3">
+                  <h5 class="text-white fw-bold mb-1">Somorika Hills, Akoko-Edo</h5>
+                  <p class="small mb-0">Dramatic rolling rock formations and breathtaking natural landscape views.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#visitEdoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#visitEdoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="text-center">
+            <a href="pages/visit-edo.html" class="btn btn-accent btn-lg text-uppercase fw-bold">
+              <i class="bi bi-airplane me-2"></i>Visit Edo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. FOOTER SECTION (Dark Background)
+     ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Seal" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'"> <!-- style="filter: brightness(0) invert(1);" -->
+            <div>
+              <h5 class="mb-0 text-white fw-bold">Edo State Government</h5>
+              <small class="text-accent">Official Gateway Portal</small>
+            </div>
+          </div>
+          <p class="text-light opacity-75 small mb-3">
+            “Strengthening Peace… SHINE Agenda”
+          </p>
+          <div class="social-links d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Government -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white">Government</h5>
+          <ul class="footer-links">
+            <li><a href="#">Government</a></li>
+            <li><a href="#">Office of the Governor</a></li>
+            <li><a href="#">MDAs Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Policies -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Policies</h5>
+          <ul class="footer-links">
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Welfare</a></li>
+            <li><a href="#">Employment</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: About -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">About</h5>
+          <ul class="footer-links">
+            <li><a href="#">People</a></li>
+            <li><a href="#visit">Visit Edo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="small mb-0 text-light opacity-75">
+          &copy; 2026 Edo State Government. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

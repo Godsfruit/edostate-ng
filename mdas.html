@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MDAs Directory | Edo State Government</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  
+  <!-- Custom Design System & Overrides -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <div class="topbar py-1">
+    <div class="container d-flex justify-content-between align-items-center">
+      <small><i class="bi bi-geo-alt-fill me-1 text-accent"></i> Palm House / Secretariat Complex, Sapele Road, Benin City</small>
+      <div class="topbar-links">
+        <a href="e-services.html" class="me-3"><i class="bi bi-laptop me-1"></i> Online Services</a>
+        <a href="index.html#news"><i class="bi bi-newspaper me-1"></i> Public Notices</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Crest & Title -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Crest" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+        <div>
+          <div class="brand-text-title">EDSG</div>
+          <div class="brand-text-subtitle">Official State Portal</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        
+          <!-- 1. Home -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <!-- 2. Governance Dropdown (Consolidates Executive, Legislature & Judiciary) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="governanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Governance
+            </a>
+            <ul class="dropdown-menu shadow border-0" aria-labelledby="governanceDropdown">
+              <li><a class="dropdown-item" href="goverance/executive-cabinet.html"><i class="bi bi-person-badge me-2 text-accent"></i> Executive Leadership</a></li>
+              <li><a class="dropdown-item" href="goverance/legislature.html"><i class="bi bi-bank me-2 text-accent"></i> House of Assembly</a></li>
+              <li><a class="dropdown-item" href="goverance/judiciary.html"><i class="bi bi-shield-shaded me-2 text-accent"></i> Judiciary</a></li>
+            </ul>
+          </li>
+
+          <!-- 3. MDAs Directory -->
+          <li class="nav-item">
+            <a class="nav-link active" href="mdas.html">MDAs Directory</a>
+          </li>
+
+          <!-- 4. E-Services -->
+          <li class="nav-item">
+            <a class="nav-link" href="e-services.html">E-Services</a>
+          </li>
+
+          <!-- 5. LGAs Portal -->
+          <li class="nav-item">
+            <a class="nav-link" href="lgas.html">LGAs Portal</a>
+          </li>
+
+          <!-- Citizen Portal CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="e-services.html" class="btn btn-accent btn-sm text-uppercase fw-semibold"><i class="bi bi-laptop me-1"></i> Citizen Portal</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       PAGE HEADER / BREADCRUMB HERO
+     ========================================================================= -->
+  <section class="page-banner position-relative py-5 bg-dark-theme text-white overflow-hidden" style="background-color: var(--color-bg-dark);">
+    <div class="container position-relative py-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html" class="text-accent text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item text-light opacity-75">Public Admin</li>
+          <li class="breadcrumb-item active text-white" aria-current="page">MDAs Directory</li>
+        </ol>
+      </nav>
+      <h1 class="display-5 fw-bold text-white mb-2">Ministries, Departments & Agencies</h1>
+      <p class="lead text-light opacity-75 mb-0 max-w-700">
+        Directory of all official Edo State government bodies, boards, commissions, and public tertiary institutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEARCH & FILTER BAR
+     ========================================================================= -->
+  <section class="py-4 bg-alt-section border-bottom sticky-md-top" style="top: 70px; z-index: 990;">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <!-- Live Search Input -->
+        <div class="col-lg-6">
+          <div class="input-group shadow-sm">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+            <input type="text" id="mdaSearchInput" class="form-control border-start-0 ps-0" placeholder="Search MDA by name, keyword, or location (e.g. EDOGIS, Health, Taxes)...">
+          </div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="col-lg-6 text-lg-end">
+          <div class="btn-group filter-btn-group shadow-sm w-100 w-lg-auto" role="group" aria-label="Filter MDAs by classification">
+            <button type="button" class="btn btn-outline-primary active" data-mda-filter="all">All MDAs</button>
+            <button type="button" class="btn btn-outline-primary" data-mda-filter="ministry">Ministries</button>
+            <button type="button" class="btn btn-outline-primary" data-mda-filter="agency">Agencies & Boards</button>
+            <button type="button" class="btn btn-outline-primary" data-mda-filter="institution">Tertiary Institutions</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MDA CARDS GRID
+     ========================================================================= -->
+  <section class="section-padding bg-surface">
+    <div class="container">
+      <div class="row g-4" id="mdaCardsGrid">
+
+        <!-- 1. EDOGIS -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="agency" data-search="edogis edo geographic information service land certificate ownership title deed c-of-o sapele road">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-primary-subtle text-primary rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-geo-fill"></i>
+              </div>
+              <div>
+                <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">Agency & Board</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">EDOGIS</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Edo Geographic Information Service</h4>
+            <p class="text-muted fs-xs mb-3">
+              Digital land administration, Certificate of Occupancy (C-of-O) issuance, geographic survey mapping, and land registry searches.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> 102 Sapele Road, Benin City</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 813 983 0000</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> edogis.edostate.gov.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Edo Geographic Information Service (EDOGIS)" data-mda-head="Director General" data-mda-address="102 Sapele Road, Benin City, Edo State" data-mda-phone="+234 (0) 813 983 0000" data-mda-email="info@edogis.gov.ng" data-mda-desc="EDOGIS is the sole statutory agency mandated to manage, digitize, and process land titles, geographical surveys, and property registration across all 18 LGAs in Edo State.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. EIRS -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="agency" data-search="eirs edo internal revenue service taxes tin land use charge revenue collection new akpakpava">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-warning-subtle text-dark rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <div>
+                <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">Agency & Board</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">EIRS</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Edo Internal Revenue Service</h4>
+            <p class="text-muted fs-xs mb-3">
+              State tax collection, Tax Identification Number (TIN) issuance, Land Use Charge assessments, and motor vehicle licensing.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> 20 New Lagos Road, Benin City</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 800 347 7000</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> eirs.gov.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Edo Internal Revenue Service (EIRS)" data-mda-head="Executive Chairman" data-mda-address="20 New Lagos Road, Benin City, Edo State" data-mda-phone="+234 (0) 800 347 7000" data-mda-email="taxqueries@eirs.gov.ng" data-mda-desc="EIRS is responsible for assessing, collecting, and accounting for internal revenues and personal income taxes accruable to the Government of Edo State.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. EDSMPPA -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="agency" data-search="edsmppa public procurement agency tenders contractors compliance legal contracts sapele road">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-success-subtle text-success rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-file-earmark-check-fill"></i>
+              </div>
+              <div>
+                <span class="badge bg-secondary-subtle text-dark fs-xs mb-1">Agency & Board</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">EDSMPPA</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Public Procurement Agency</h4>
+            <p class="text-muted fs-xs mb-3">
+              Contractor registration, government tender oversight, procurement certificate of compliance, and vendor regulations.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Block C, Palm House, Benin City</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 52 290 311</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> edprocurement.gov.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Edo State Public Procurement Agency (EDSMPPA)" data-mda-head="Managing Director / MD" data-mda-address="Block C, Palm House Complex, Sapele Road, Benin City" data-mda-phone="+234 (0) 52 290 311" data-mda-email="procurement@edostate.gov.ng" data-mda-desc="EDSMPPA establishes transparent, fair, and competitive public procurement standards, regulating all state expenditure on works, goods, and consulting services.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Ministry of Infrastructure -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="ministry" data-search="ministry of works infrastructure roads civil engineering palm house sapele road">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-info-subtle text-info rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-cone-striped"></i>
+              </div>
+              <div>
+                <span class="badge bg-primary-subtle text-primary fs-xs mb-1">Ministry</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">MOWI</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Ministry of Infrastructure</h4>
+            <p class="text-muted fs-xs mb-3">
+              Planning, constructing, and maintaining state trunk roads, public bridges, and civil engineering assets across 18 LGAs.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Palm House Complex, Benin City</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 52 251 040</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> infrastructure@edostate.gov.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Ministry of Infrastructure" data-mda-head="Hon. Commissioner" data-mda-address="Palm House, Sapele Road, Benin City" data-mda-phone="+234 (0) 52 251 040" data-mda-email="infrastructure@edostate.gov.ng" data-mda-desc="Formulates policy and executes capital road engineering projects, stormwater drainage networks, and state building maintenance.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Ministry of Education -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="ministry" data-search="ministry of education edobest schools basic primary secondary tvet skills benin city">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-primary-subtle text-primary rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-book-half"></i>
+              </div>
+              <div>
+                <span class="badge bg-primary-subtle text-primary fs-xs mb-1">Ministry</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">MOE</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Ministry of Education</h4>
+            <p class="text-muted fs-xs mb-3">
+              Supervising primary and secondary schools, EdoBEST digital learning programs, curriculum standards, and teacher welfare.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Secretariat Complex, Benin City</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 52 255 101</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> education.edostate.gov.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Ministry of Education" data-mda-head="Hon. Commissioner" data-mda-address="Secretariat Complex, Sapele Road, Benin City" data-mda-phone="+234 (0) 52 255 101" data-mda-email="education@edostate.gov.ng" data-mda-desc="Oversees basic education delivery, technical vocational education and training (TVET), school inspections, and state scholarship schemes.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Ambrose Alli University (AAU) -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="institution" data-search="ambrose alli university aau ekpoma tertiary education degree university college">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <div>
+                <span class="badge bg-danger-subtle text-danger fs-xs mb-1">Tertiary Institution</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">AAU Ekpoma</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Ambrose Alli University</h4>
+            <p class="text-muted fs-xs mb-3">
+              State-owned tertiary university delivering undergraduate, postgraduate research, professional degrees, and academic excellence.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Ekpoma, Edo Central</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 55 981 002</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> aauekpoma.edu.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Ambrose Alli University (AAU)" data-mda-head="Vice Chancellor" data-mda-address="PMB 14, Ekpoma, Edo State, Nigeria" data-mda-phone="+234 (0) 55 981 002" data-mda-email="info@aauekpoma.edu.ng" data-mda-desc="Established in 1981, AAU Ekpoma is the premier state university of Edo State offering accredited degree programs across Arts, Sciences, Engineering, Law, and Medicine.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Edo State Polytechnic Usen -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="institution" data-search="edo state polytechnic usen polytechnic nd hnd engineering technology computer science">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-danger-subtle text-danger rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-cpu-fill"></i>
+              </div>
+              <div>
+                <span class="badge bg-danger-subtle text-danger fs-xs mb-1">Tertiary Institution</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">EDOPOLY</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Edo State Polytechnic, Usen</h4>
+            <p class="text-muted fs-xs mb-3">
+              Technical institution offering National Diploma (ND) and Higher National Diploma (HND) in applied science, engineering, and ICT.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Usen, Ovia South-West LGA</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 803 123 4567</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> edopoly.edu.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Edo State Polytechnic Usen" data-mda-head="Rector" data-mda-address="Usen, Ovia South-West Local Government Area, Edo State" data-mda-phone="+234 (0) 803 123 4567" data-mda-email="admissions@edopoly.edu.ng" data-mda-desc="Offers practical technical training and vocational technology programs designed for industrial workforce development.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Ministry of Health -->
+        <div class="col-md-6 col-lg-4 mda-card-item" data-category="ministry" data-search="ministry of health edocare primary healthcare hospital medical disease control">
+          <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden p-3 bg-white">
+            <div class="d-flex align-items-center mb-3">
+              <div class="badge-icon bg-success-subtle text-success rounded-3 p-3 me-3 fs-4">
+                <i class="bi bi-heart-pulse-fill"></i>
+              </div>
+              <div>
+                <span class="badge bg-primary-subtle text-primary fs-xs mb-1">Ministry</span>
+                <h3 class="h6 fw-bold mb-0 text-secondary">MOH</h3>
+              </div>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Ministry of Health</h4>
+            <p class="text-muted fs-xs mb-3">
+              Formulating healthcare policy, managing general hospitals, primary healthcare centers, and public epidemiology.
+            </p>
+            <ul class="list-unstyled fs-xs text-muted mb-3 border-top pt-2">
+              <li class="mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Secretariat Complex, Benin City</li>
+              <li class="mb-1"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 52 250 300</li>
+              <li><i class="bi bi-globe me-1 text-accent"></i> health.edostate.gov.ng</li>
+            </ul>
+            <button class="btn btn-sm btn-outline-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#mdaModal" data-mda-name="Ministry of Health" data-mda-head="Hon. Commissioner" data-mda-address="Secretariat Complex, Sapele Road, Benin City" data-mda-phone="+234 (0) 52 250 300" data-mda-email="health@edostate.gov.ng" data-mda-desc="Drives affordable healthcare access, disease surveillance, hospital accreditation, and health insurance regulation across Edo State.">
+              View Office Mandate <i class="bi bi-arrow-right ms-1"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Search No Results State -->
+      <div id="noMdaResults" class="text-center py-5 d-none">
+        <div class="fs-1 text-muted mb-2"><i class="bi bi-building-slash"></i></div>
+        <h3 class="h5 text-secondary fw-bold">No Matching MDA Found</h3>
+        <p class="text-muted small">Try checking your spelling or adjusting your category filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MDA QUICK DETAIL MODAL
+     ========================================================================= -->
+  <div class="modal fade" id="mdaModal" tabindex="-1" aria-labelledby="mdaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-dark-theme text-white border-0">
+          <h5 class="modal-title fw-bold" id="mdaModalLabel">MDA Office Profile</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <h3 id="modalMdaName" class="h5 fw-bold text-secondary mb-3">MDA Name</h3>
+          <p id="modalMdaDesc" class="text-muted fs-sm mb-4">MDA description text goes here.</p>
+          
+          <div class="bg-alt-section rounded-3 p-3 mb-3">
+            <h4 class="h6 fw-bold text-uppercase fs-xs text-accent mb-2">Office Directory Details</h4>
+            <ul class="list-unstyled fs-sm mb-0">
+              <li class="mb-2"><strong>Head of Agency:</strong> <span id="modalMdaHead" class="text-muted">N/A</span></li>
+              <li class="mb-2"><strong>Physical Office:</strong> <span id="modalMdaAddress" class="text-muted">N/A</span></li>
+              <li class="mb-2"><strong>Official Phone:</strong> <span id="modalMdaPhone" class="text-muted">N/A</span></li>
+              <li><strong>Official Email:</strong> <span id="modalMdaEmail" class="text-muted">N/A</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+          <a href="e-services.html" class="btn btn-accent btn-sm">Access Portal Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER SECTION
+     ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Logo & Motto -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="assets/images/brand/edo-coat-of-arms.png" alt="Edo State Seal" class="brand-crest me-3" onerror="this.src='https://placehold.co/52x52/28505C/FFFFFF?text=EDO'">
+            <div>
+              <h5 class="mb-0 text-white fw-bold">Edo State Government</h5>
+              <small class="text-accent">Public Directory</small>
+            </div>
+          </div>
+          <p class="text-light opacity-75 small mb-3">
+            “Connecting citizens directly with government ministries, departments, and public boards.”
+          </p>
+        </div>
+
+        <!-- Column 2: Governance -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white">Governance</h5>
+          <ul class="footer-links">
+            <li><a href="legislature.html">House of Assembly</a></li>
+            <li><a href="executive-cabinet.html">Executive Council</a></li>
+            <li><a href="mdas.html">MDAs Directory</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="e-services.html">Tax & Revenue (EIRS)</a></li>
+            <li><a href="e-services.html">Land Registry (EDOGIS)</a></li>
+            <li><a href="e-services.html">Public Procurement</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white">Secretariat</h5>
+          <p class="text-light opacity-75 small mb-1"><i class="bi bi-geo-alt me-1 text-accent"></i> Palm House, Sapele Road, Benin City</p>
+          <p class="text-light opacity-75 small mb-1"><i class="bi bi-envelope me-1 text-accent"></i> mda@edostate.gov.ng</p>
+          <p class="text-light opacity-75 small"><i class="bi bi-telephone me-1 text-accent"></i> +234 (0) 52 290 000</p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom text-center">
+        <p class="small mb-0 text-light opacity-75">
+          &copy; 2026 Government of Edo State, Nigeria. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Interactive Live Search & Modal Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('mdaSearchInput');
+      const filterButtons = document.querySelectorAll('.filter-btn-group button');
+      const mdaItems = document.querySelectorAll('.mda-card-item');
+      const noResults = document.getElementById('noMdaResults');
+
+      let currentCategory = 'all';
+
+      // Live Search Filter Function
+      function filterMDAs() {
+        const query = searchInput.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        mdaItems.forEach(item => {
+          const categoryMatch = (currentCategory === 'all' || item.getAttribute('data-category') === currentCategory);
+          const textMatch = query === '' || item.getAttribute('data-search').toLowerCase().includes(query) || item.innerText.toLowerCase().includes(query);
+
+          if (categoryMatch && textMatch) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResults.classList.remove('d-none');
+        } else {
+          noResults.classList.add('d-none');
+        }
+      }
+
+      // Input Event Listener
+      searchInput.addEventListener('keyup', filterMDAs);
+
+      // Filter Button Event Listeners
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          currentCategory = button.getAttribute('data-mda-filter');
+          filterMDAs();
+        });
+      });
+
+      // Populate Modal with Dynamic Data
+      const mdaModal = document.getElementById('mdaModal');
+      mdaModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget;
+        
+        document.getElementById('modalMdaName').innerText = button.getAttribute('data-mda-name');
+        document.getElementById('modalMdaHead').innerText = button.getAttribute('data-mda-head');
+        document.getElementById('modalMdaAddress').innerText = button.getAttribute('data-mda-address');
+        document.getElementById('modalMdaPhone').innerText = button.getAttribute('data-mda-phone');
+        document.getElementById('modalMdaEmail').innerText = button.getAttribute('data-mda-email');
+        document.getElementById('modalMdaDesc').innerText = button.getAttribute('data-mda-desc');
+      });
+    });
+  </script>
+</body>
+</html>
