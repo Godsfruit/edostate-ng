@@ -1,0 +1,94 @@
+/* ==========================================================================
+   EDO STATE GOVERNMENT PORTAL - DESIGN SYSTEM & VARIABLES
+   Font Families: Lato (Headings), Roboto (Body)
+   Primary Color: #28505C (Slate Teal)
+   ========================================================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. TYPOGRAPHY SYSTEM
+     ------------------------------------------------------------------------ */
+  --font-heading: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Font Size Scale (rem-based) */
+  --fs-xs: 0.75rem;     /* 12px */
+  --fs-sm: 0.875rem;    /* 14px */
+  --fs-base: 1rem;      /* 16px Base */
+  --fs-md: 1.125rem;    /* 18px */
+  --fs-lg: 1.25rem;     /* 20px */
+  --fs-xl: 1.75rem;     /* 28px */
+  --fs-xxl: 2.25rem;    /* 36px */
+  --fs-hero: 3.25rem;   /* 52px Hero Headlines */
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+
+  /* ------------------------------------------------------------------------
+     2. COLOR PALETTE
+     ------------------------------------------------------------------------ */
+  /* Brand Core Colors */
+  --color-primary: #28505C;         /* Primary Slate Teal */
+  --color-primary-dark: #1C3942;    /* Dark Teal (Hover/Active) */
+  --color-primary-light: #3A6D7C;   /* Light Slate Variant */
+  --color-primary-subtle: #EBF2F4;  /* Very Light Background Tint */
+
+  --color-secondary: #11252C;       /* Deep Neutral / Header Dark */
+  
+  --color-accent: #E2A123;          /* Warm Amber Gold (High Contrast) */
+  --color-accent-hover: #C78B1A;    /* Darker Gold Hover */
+  --color-accent-light: #F9F871;    /* Pale Yellow Highlight */
+
+  /* Neutral Backgrounds & Surface Colors */
+  --color-bg-main: #FFFFFF;
+  --color-bg-alt: #F8F9FA;          /* Section Alternate Background */
+  --color-bg-dark: #0D1A1E;         /* Footer & Dark Sections */
+  --color-surface: #FFFFFF;
+
+  /* Text & Border Colors */
+  --color-text-main: #2B303A;
+  --color-text-muted: #6C757D;
+  --color-text-light: #F8F9FA;
+  --color-border: #E2E8F0;
+  --color-border-dark: #2A3E45;
+
+  /* ------------------------------------------------------------------------
+     3. SPACING SYSTEM (rem-based 8px grid)
+     ------------------------------------------------------------------------ */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 1rem;      /* 16px */
+  --space-4: 1.5rem;    /* 24px */
+  --space-5: 2rem;      /* 32px */
+  --space-6: 3rem;      /* 48px */
+  --space-7: 5rem;      /* 80px Section Padding */
+
+  /* ------------------------------------------------------------------------
+     4. COMPONENT SHADOWS & BORDER RADIUS
+     ------------------------------------------------------------------------ */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 50px;
+
+  --shadow-sm: 0 2px 4px rgba(17, 37, 44, 0.04);
+  --shadow-md: 0 4px 12px rgba(17, 37, 44, 0.08);
+  --shadow-lg: 0 12px 32px rgba(17, 37, 44, 0.12);
+  --shadow-hover: 0 16px 40px rgba(40, 80, 92, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
