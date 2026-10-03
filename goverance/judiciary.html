@@ -13,42 +13,9 @@
   <!-- Custom Design System & Overrides -->
   <link rel="stylesheet" href="../assets/css/variables.css">
   <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
 
-  <style>
-    /* Judiciary Specific Component Styles */
-    .hero-page-banner {
-      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-dark) 100%);
-      color: var(--color-text-light);
-      padding: var(--space-6) 0 var(--space-5);
-      border-bottom: 3px solid var(--color-accent);
-    }
-
-    .judiciary-card {
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      background-color: var(--color-surface);
-      transition: all var(--transition-smooth);
-      height: 100%;
-    }
-
-    .judiciary-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
-      border-color: var(--color-primary-light);
-    }
-
-    .court-icon-box {
-      width: 56px;
-      height: 56px;
-      border-radius: var(--radius-md);
-      background-color: var(--color-primary-subtle);
-      color: var(--color-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-    }
-
+<style>
     .official-avatar {
       width: 100%;
       height: 280px;
@@ -66,8 +33,7 @@
       border-left-color: var(--color-accent);
       background-color: var(--color-primary-subtle);
     }
-  </style>
-</head>
+</style>
 <body>
 
   <!-- Top Navigation Bar -->
@@ -145,11 +111,11 @@
   </nav>
 
   <!-- Hero Banner -->
-  <header class="hero-page-banner">
+  <section class="page-banner position-relative py-5 text-white overflow-hidden" style="background: var(--color-primary-dark);">
     <div class="container">
       <div class="row align-items-center gy-3">
         <div class="col-lg-8">
-          <span class="badge bg-accent text-dark mb-2 px-3 py-1 text-uppercase fw-bold">Third Arm of Government</span>
+          <span class="badge bg-accent text-light opacity-50 mb-2 px-3 py-1 text-uppercase fw-bold">Third Arm of Government</span>
           <h1 class="text-white fw-bold display-5 mb-2">Edo State Judiciary</h1>
           <p class="text-light opacity-75 lead mb-0">
             Upholding the rule of law, dispensing justice impartially, and safeguarding constitutional rights across Edo State.
@@ -163,7 +129,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- Main Content Area -->
   <main class="section-padding bg-alt-section">
@@ -235,8 +201,8 @@
         <div class="row g-4">
           <!-- High Court -->
           <div class="col-md-6 col-lg-4">
-            <div class="judiciary-card p-4 d-flex flex-column">
-              <div class="court-icon-box mb-3">
+            <div class="service-card p-4 d-flex flex-column">
+              <div class="service-icon-box mb-3">
                 <i class="bi bi-bank"></i>
               </div>
               <h3 class="h5 fw-bold text-secondary">High Court of Justice</h3>
@@ -252,8 +218,8 @@
 
           <!-- Customary Court of Appeal -->
           <div class="col-md-6 col-lg-4">
-            <div class="judiciary-card p-4 d-flex flex-column">
-              <div class="court-icon-box mb-3">
+            <div class="service-card p-4 d-flex flex-column">
+              <div class="service-icon-box mb-3">
                 <i class="bi bi-book"></i>
               </div>
               <h3 class="h5 fw-bold text-secondary">Customary Court of Appeal</h3>
@@ -268,9 +234,9 @@
 
           <!-- Magistrate Courts -->
           <div class="col-md-6 col-lg-4">
-            <div class="judiciary-card p-4 d-flex flex-column">
-              <div class="court-icon-box mb-3">
-                <i class="bi bi-balance"></i>
+            <div class="service-card p-4 d-flex flex-column">
+              <div class="service-icon-box mb-3">
+                <i class="bi bi-shield"></i>
               </div>
               <h3 class="h5 fw-bold text-secondary">Magistrate Courts</h3>
               <p class="small text-muted flex-grow-1">
@@ -284,8 +250,8 @@
 
           <!-- Customary Courts -->
           <div class="col-md-6 col-lg-4">
-            <div class="judiciary-card p-4 d-flex flex-column">
-              <div class="court-icon-box mb-3">
+            <div class="service-card p-4 d-flex flex-column">
+              <div class="service-icon-box mb-3">
                 <i class="bi bi-people"></i>
               </div>
               <h3 class="h5 fw-bold text-secondary">Area & Customary Courts</h3>
@@ -300,9 +266,9 @@
 
           <!-- Edo Multi-Door Court House -->
           <div class="col-md-6 col-lg-4">
-            <div class="judiciary-card p-4 d-flex flex-column">
-              <div class="court-icon-box mb-3">
-                <i class="bi bi-handshake"></i>
+            <div class="service-card p-4 d-flex flex-column">
+              <div class="service-icon-box mb-3">
+                <i class="bi bi-shield-check"></i>
               </div>
               <h3 class="h5 fw-bold text-secondary">Multi-Door Court House</h3>
               <p class="small text-muted flex-grow-1">
@@ -316,8 +282,8 @@
 
           <!-- Judicial Service Commission -->
           <div class="col-md-6 col-lg-4">
-            <div class="judiciary-card p-4 d-flex flex-column">
-              <div class="court-icon-box mb-3">
+            <div class="service-card p-4 d-flex flex-column">
+              <div class="service-icon-box mb-3">
                 <i class="bi bi-award"></i>
               </div>
               <h3 class="h5 fw-bold text-secondary">Judicial Service Commission</h3>
@@ -335,7 +301,7 @@
 
       <!-- Legal Help & Registry Contact -->
       <section class="mt-5">
-        <div class="card bg-primary text-white border-0 shadow rounded-lg p-4 p-md-5">
+        <div class="card text-white border-0 shadow rounded-lg p-4 p-md-5" style="background: var(--color-primary)">
           <div class="row align-items-center g-4">
             <div class="col-lg-8">
               <h3 class="fw-bold mb-2 text-white">Need Judicial Information or Court Filings?</h3>
